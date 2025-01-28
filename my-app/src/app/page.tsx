@@ -14,7 +14,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     // ダミーデータを生成
-    const newDummyData = dummyData(10); // 例: 100件生成
+    const newDummyData = dummyData(1000);
     setData(newDummyData); // 状態を更新
     setStartData(newDummyData);
     console.log(newDummyData);
