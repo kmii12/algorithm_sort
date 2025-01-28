@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 
 import { dummyData, User } from "./utils/dummyData";
-// import { sortObject, sortBubble } from "./utils/algorithms";
+import { sortObject, sortBubble } from "./utils/algorithms";
 
 const Home: React.FC = () => {
   //ダミーデータ作成
@@ -9,5 +9,3 @@ const Home: React.FC = () => {
 
   console.log(data);
 };
-
-export default Home;
