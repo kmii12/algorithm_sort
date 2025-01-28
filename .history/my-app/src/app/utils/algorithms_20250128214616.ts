@@ -2,6 +2,7 @@ import { User } from "./dummyData";
 
 //①オブジェクトを利用したソート
 export const sortObject = (data: User[]): User[] => {
+  console.log(data);
   console.log("ageBtn click");
 
   return [...data].sort((a, b) => a.age - b.age);

@@ -8,20 +8,12 @@ import { useEffect, useState } from "react";
 
 const Home: React.FC = () => {
   const [data, setData] = useState<User[]>([]);
-  const [startData, setStartData] = useState<User[]>([]);
   useEffect(() => {
     // ダミーデータを生成
-    const newDummyData = dummyData(10); // 例: 100件生成
+    const newDummyData = dummyData(100); // 例: 100件生成
     setData(newDummyData); // 状態を更新
-    setStartData(newDummyData);
     console.log(newDummyData);
   }, []);
-
-  //リセット
-  const reset = () => {
-    setData([...startData]);
-    console.log("reset");
-  };
 
   //年齢順でソート(Object)
   const ageSort_ob = () => {
@@ -34,16 +26,12 @@ const Home: React.FC = () => {
   const ageSort_bu = () => {
     const sortedAge = sortBubble(data);
     setData([...sortedAge]);
-    console.log("bubble click");
   };
 
   return (
     <div className={style.mainContainer}>
       <h1 className={style.title}>User List (data:{data.length}) </h1>
       <div className={style.btnContainer}>
-        <button className={style.resetBtn} onClick={reset}>
-          RESET
-        </button>
         <button className={style.btnAge} onClick={ageSort_ob}>
           年齢順(Object)
         </button>
