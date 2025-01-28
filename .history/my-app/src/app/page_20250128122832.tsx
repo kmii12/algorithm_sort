@@ -36,10 +36,11 @@ const Home: React.FC = () => {
         {data.map((user) => (
           <li key={user.id} className={style.listItem}>
             <p>
-              {user.name}({user.age})
+              {user.name}
+              {user.age}
             </p>
 
-            <p className={style.cityTxt}>City : {user.city}</p>
+            <p className={style.cityTxt}> 　　　　City : {user.city}</p>
           </li>
         ))}
       </ul>

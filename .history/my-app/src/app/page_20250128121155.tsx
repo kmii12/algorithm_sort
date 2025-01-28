@@ -1,6 +1,3 @@
-"use client";
-import style from "./page.module.css";
-
 // import UserList from "./components/List";
 import { dummyData, User } from "./utils/dummyData";
 import { useEffect, useState } from "react";
@@ -30,16 +27,18 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className={style.mainContainer}>
-      <h1 className={style.title}>User List (data:{data.length}) </h1>
-      <ul className={style.listContainer}>
+    <div className="p-6">
+      <h1 className="text-2xl font-bold mb-4">User List</h1>
+      <ul className="space-y-2">
         {data.map((user) => (
-          <li key={user.id} className={style.listItem}>
-            <p>
-              {user.name}({user.age})
-            </p>
-
-            <p className={style.cityTxt}>City : {user.city}</p>
+          <li
+            key={user.id}
+            className="border rounded p-2 flex justify-between items-center"
+          >
+            <span>
+              {user.name} (Age: {user.age})
+            </span>
+            <span>{user.city}</span>
           </li>
         ))}
       </ul>

@@ -21,7 +21,7 @@
 .title {
   color: #000;
   text-align: center;
-  padding: 30px;
+  margin: 30px;
 }
 .listContainer {
   display: flex;
@@ -33,11 +33,5 @@
   padding: 20px;
   color: #000;
   display: flex;
-  justify-content: space-between;
   box-shadow: lightgray 0 3px 3px;
-}
-
-.cityTxt {
-  color: palevioletred;
-  text-align: left;
 }

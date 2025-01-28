@@ -20,5 +20,3 @@ const UserList: React.FC<UserListProps> = ({ data }) => {
     </div>
   );
 };
-
-export default UserList;

@@ -1,5 +1,5 @@
 "use client";
-import style from "./page.module.css";
+import { style } from "./page.module.css";
 
 // import UserList from "./components/List";
 import { dummyData, User } from "./utils/dummyData";
@@ -30,16 +30,13 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className={style.mainContainer}>
-      <h1 className={style.title}>User List (data:{data.length}) </h1>
-      <ul className={style.listContainer}>
+    <div className="p-6">
+      <h1>User List </h1>
+      <ul>
         {data.map((user) => (
           <li key={user.id} className={style.listItem}>
-            <p>
-              {user.name}({user.age})
-            </p>
-
-            <p className={style.cityTxt}>City : {user.city}</p>
+            <p>{user.name}</p>
+            <p>({user.age})</p>
           </li>
         ))}
       </ul>

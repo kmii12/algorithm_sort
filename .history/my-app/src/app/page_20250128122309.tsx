@@ -31,15 +31,12 @@ const Home: React.FC = () => {
 
   return (
     <div className={style.mainContainer}>
-      <h1 className={style.title}>User List (data:{data.length}) </h1>
+      <h1 className={style.title}>User List {data.length}人 </h1>
       <ul className={style.listContainer}>
         {data.map((user) => (
           <li key={user.id} className={style.listItem}>
-            <p>
-              {user.name}({user.age})
-            </p>
-
-            <p className={style.cityTxt}>City : {user.city}</p>
+            <p>{user.name}</p>
+            <p>({user.age})</p>
           </li>
         ))}
       </ul>

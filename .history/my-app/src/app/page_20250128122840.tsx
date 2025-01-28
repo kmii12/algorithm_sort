@@ -39,7 +39,7 @@ const Home: React.FC = () => {
               {user.name}({user.age})
             </p>
 
-            <p className={style.cityTxt}>City : {user.city}</p>
+            <p className={style.cityTxt}> 　　　　City : {user.city}</p>
           </li>
         ))}
       </ul>

@@ -1,5 +1,5 @@
 import React from "react";
-import { User } from "../utils/dummyData";
+import { User } from "./utils/dummyData";
 
 interface UserListProps {
   data: User[];
@@ -12,13 +12,10 @@ const UserList: React.FC<UserListProps> = ({ data }) => {
       <ul>
         {data.map((user) => (
           <li key={user.id}>
-            <p>{user.name}</p>
-            <p>{user.age}</p>
+            <p></p>
           </li>
         ))}
       </ul>
     </div>
   );
 };
-
-export default UserList;

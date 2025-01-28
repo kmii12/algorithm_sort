@@ -33,11 +33,5 @@
   padding: 20px;
   color: #000;
   display: flex;
-  justify-content: space-between;
   box-shadow: lightgray 0 3px 3px;
-}
-
-.cityTxt {
-  color: palevioletred;
-  text-align: left;
 }
