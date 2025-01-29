@@ -1,8 +1,6 @@
 "use client";
 import style from "./page.module.css";
 import { sortBubble, sortObject } from "./utils/algorithms";
-
-// import UserList from "./components/List";
 import { dummyData, User } from "./utils/dummyData";
 import { useEffect, useState } from "react";
 
@@ -14,7 +12,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     // ダミーデータを生成
-    const newDummyData = dummyData(1000);
+    const newDummyData = dummyData(100);
     setData(newDummyData); // 状態を更新
     setStartData(newDummyData);
     console.log(newDummyData);
@@ -28,8 +26,7 @@ const Home: React.FC = () => {
 
   //年齢順でソート(Object)
   const ageSort_ob = () => {
-    const start = performance.now(); // 計測開始
-
+    const start = performance.now(); //計測開始
     const sortedAge = sortObject(data);
     setData([...sortedAge]);
     const end = performance.now(); //計測終了
@@ -38,7 +35,7 @@ const Home: React.FC = () => {
 
   //年齢順でソート(Bubble)
   const ageSort_bu = () => {
-    const start = performance.now(); // 計測開始
+    const start = performance.now(); //計測開始
 
     const sortedAge = sortBubble(data);
     setData([...sortedAge]);
@@ -55,10 +52,10 @@ const Home: React.FC = () => {
             RESET
           </button>
           <button className={style.btnAge} onClick={ageSort_ob}>
-            年齢順(Object)
+            年齢順01
           </button>
           <button className={style.btnAge} onClick={ageSort_bu}>
-            年齢順(Bubble)
+            年齢順02
           </button>
         </div>
 
@@ -66,8 +63,8 @@ const Home: React.FC = () => {
           {/* <p>Object計測時間：{(timeO ? timeO / 1000 : 0).toFixed(2)}ms</p>
           <p>Bubble計測時間：{(timeB ? timeB / 1000 : 0).toFixed(2)}ms</p> */}
 
-          <p>Object計測時間：{(timeO ? timeO : 0).toFixed(2)}ms</p>
-          <p>Bubble計測時間：{(timeB ? timeB : 0).toFixed(2)}ms</p>
+          <p>01 - 計測時間：{(timeO ? timeO : 0).toFixed(2)}ms</p>
+          <p>02 - 計測時間：{(timeB ? timeB : 0).toFixed(2)}ms</p>
         </div>
       </header>
 
